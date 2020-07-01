@@ -21,9 +21,9 @@ PAYLOAD_DIR = "/bunny/payloads"
 TCP_PORT = 18861
 
 # IO port definitions
-IO_LEDS = {"green":19, "red":11} # green on gpio 19. etc
+IO_LEDS = {"green":19, "red":11, "blue":22} # green on gpio 19. etc
 IO_DIP = [2, 3, 4, 17] # Dip switch1 on io pin2, switch2 on io pin3 etc.
-IO_BUTTONS = {"green":13, "red":10} # green button on io 13 etc
+IO_BUTTONS = {"green":13, "red":10} # green button on io 13 etc    #TODO change naming scheme
 
 
 
