@@ -1,9 +1,11 @@
 #!/bin/bash
 
-keyboardLayout="DK"
+keyboardLayout="TR"
 export keyboardLayout # If you live in the US, just rem this out
 
+LED RED OFF
 LED GREEN OFF 
+LED BLUE OFF
 
 ATTACKMODE STORAGE HID # We want to present a storage device and a keyboard to the target
 sleep 5
@@ -16,4 +18,6 @@ QUACK DELAY 500
 QUACK STRING "dir c:\\"
 QUACK ENTER
 
+LED RED ON
 LED GREEN ON
+LED BLUE ON

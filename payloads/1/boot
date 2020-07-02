@@ -1,5 +1,6 @@
 #!/bin/bash
 
 # A small test that sets the LEDs flashing slowly.
-LED GREEN SLOW
 LED RED SLOW
+LED GREEN SLOW
+LED BLUE SLOW
