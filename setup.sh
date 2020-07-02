@@ -19,7 +19,7 @@ chmod +x duckpi.sh
 
 # Create a mass storage device that can be used for target machine
 mkdir -p /bunny/storage
-dd if=/dev/zero of=/bunny/storage/system.img bs=1M count=128
+dd if=/dev/zero of=/bunny/storage/system.img bs=1M count=20480
 mkdosfs /bunny/storage/system.img
 fatlabel /bunny/storage/system.img BUNNY
 mkdir -p /bunny/mnt
