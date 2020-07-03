@@ -9,7 +9,7 @@ from rpyc.utils.server import ThreadedServer
 import os
 import logging 
 
-logging.basicConfig(level="INFO")
+logging.basicConfig(filename='/bunny/payloads/bunny.log', level="INFO")
 
 
 
