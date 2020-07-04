@@ -63,4 +63,5 @@ ln -s /bunny/bin/ATTACKMODE /usr/bin/ATTACKMODE
 ln -s /bunny/bin/LED /usr/bin/LED
 ln -s /bunny/bin/QUACK /usr/bin/QUACK
 ln -s /bunny/bin/SYNC_PAYLOADS /usr/bin/SYNC_PAYLOADS
+ln -s /bunny/bin/EDIT_PAYLOADS /usr/bin/EDIT_PAYLOADS
 ln -s /bunny/bin/WAIT_TARGET /usr/bin/WAIT_TARGET
