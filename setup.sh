@@ -17,6 +17,14 @@ chmod 755 /bunny/bin/keyboardtype
 chmod +x duckpi.sh
 
 
+# Set up permissions - make all payloads executable    TODO move this to a separate script and call it from bunny-launcher.py if target-side edited payloads require
+for i in {0..15}
+do
+   chmod +x /bunny/payloads/$i/boot
+   chmod +x /bunny/payloads/$i/red_button
+   chmod +x /bunny/payloads/$i/green_button
+done
+
 # Create a mass storage device that can be used for target machine
 mkdir -p /bunny/storage
 dd if=/dev/zero of=/bunny/storage/system.img bs=1M count=20720
@@ -25,7 +33,14 @@ fatlabel /bunny/storage/system.img BUNNY
 mkdir -p /bunny/mnt
 mount -o loop /bunny/storage/system.img /bunny/mnt
 mkdir /bunny/mnt/loot
-/bunny/bin/SYNC_PAYLOADS # Make sure payloads are on storage device.
+
+
+# Make sure payloads are on storage device.
+umount /bunny/storage/system.img
+mount /bunny/storage/system.img /bunny/mnt
+rsync -av /bunny/payloads /bunny/mnt
+rm /bunny/mnt/target_finished # clean up and make sure the target can make this file when he finishes his job
+umount /bunny/mnt
 
 
 # Make sure that gadgets can be used. Modules need to be loaded at boot time

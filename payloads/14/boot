@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# A small test that sets the LEDs flashing quick.
+LED RED FAST
+LED GREEN FAST
+LED BLUE FAST

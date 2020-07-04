@@ -2,7 +2,6 @@
 
 LED GREEN FAST
 
-SYNC_PAYLOADS # Make sure the payloads folder is in the usb-storage device that the target gets
 ATTACKMODE STORAGE HID # Setup the gadgets so the PI presents itself as a HID and a storage device
 
 keyboardLayout="TR"
