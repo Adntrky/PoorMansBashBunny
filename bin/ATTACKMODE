@@ -138,6 +138,3 @@ then
     ifconfig $N 172.16.64.1 netmask 255.255.255.0 up
     systemctl restart isc-dhcp-server.service
 fi
-
-
- 

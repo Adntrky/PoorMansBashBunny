@@ -18,12 +18,55 @@ chmod +x duckpi.sh
 
 
 # Set up permissions - make all payloads executable    TODO move this to a separate script and call it from bunny-launcher.py if target-side edited payloads require
-for i in {0..15}
-do
-   chmod +x /bunny/payloads/$i/boot
-   chmod +x /bunny/payloads/$i/red_button
-   chmod +x /bunny/payloads/$i/green_button
-done
+chmod +x /bunny/payloads/0/boot
+chmod +x /bunny/payloads/0/button_red
+chmod +x /bunny/payloads/0/button_green
+chmod +x /bunny/payloads/1/boot
+chmod +x /bunny/payloads/1/button_red
+chmod +x /bunny/payloads/1/button_green
+chmod +x /bunny/payloads/2/boot
+chmod +x /bunny/payloads/2/button_red
+chmod +x /bunny/payloads/2/button_green
+chmod +x /bunny/payloads/3/boot
+chmod +x /bunny/payloads/3/button_red
+chmod +x /bunny/payloads/3/button_green
+chmod +x /bunny/payloads/4/boot
+chmod +x /bunny/payloads/4/button_red
+chmod +x /bunny/payloads/4/button_green
+chmod +x /bunny/payloads/5/boot
+chmod +x /bunny/payloads/5/button_red
+chmod +x /bunny/payloads/5/button_green
+chmod +x /bunny/payloads/6/boot
+chmod +x /bunny/payloads/6/button_red
+chmod +x /bunny/payloads/6/button_green
+chmod +x /bunny/payloads/7/boot
+chmod +x /bunny/payloads/7/button_red
+chmod +x /bunny/payloads/7/button_green
+chmod +x /bunny/payloads/8/boot
+chmod +x /bunny/payloads/8/button_red
+chmod +x /bunny/payloads/8/button_green
+chmod +x /bunny/payloads/9/boot
+chmod +x /bunny/payloads/9/button_red
+chmod +x /bunny/payloads/9/button_green
+chmod +x /bunny/payloads/10/boot
+chmod +x /bunny/payloads/10/button_red
+chmod +x /bunny/payloads/10/button_green
+chmod +x /bunny/payloads/11/boot
+chmod +x /bunny/payloads/11/button_red
+chmod +x /bunny/payloads/11/button_green
+chmod +x /bunny/payloads/12/boot
+chmod +x /bunny/payloads/12/button_red
+chmod +x /bunny/payloads/12/button_green
+chmod +x /bunny/payloads/13/boot
+chmod +x /bunny/payloads/13/button_red
+chmod +x /bunny/payloads/13/button_green
+chmod +x /bunny/payloads/14/boot
+chmod +x /bunny/payloads/14/button_red
+chmod +x /bunny/payloads/14/button_green
+chmod +x /bunny/payloads/15/boot
+chmod +x /bunny/payloads/15/button_red
+chmod +x /bunny/payloads/15/button_green
+
 
 # Create a mass storage device that can be used for target machine
 mkdir -p /bunny/storage
