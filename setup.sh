@@ -33,18 +33,11 @@ fatlabel /bunny/storage/system.img BUNNY
 mkdir -p /bunny/mnt
 mount -o loop /bunny/storage/system.img /bunny/mnt
 mkdir /bunny/mnt/loot
-
-
-# Make sure payloads are on storage device.
-umount /bunny/storage/system.img
-mount /bunny/storage/system.img /bunny/mnt
-rsync -av /bunny/payloads /bunny/mnt
-rm /bunny/mnt/target_finished # clean up and make sure the target can make this file when he finishes his job
-umount /bunny/mnt
+/bunny/bin/SYNC_PAYLOADS # Make sure payloads are on storage device.
 
 
 # Make sure that gadgets can be used. Modules need to be loaded at boot time
-grep -q -F 'dwc2' /etc/modules || echo 'dwc2' >> /etc/modules
+grep -q -F 'dwc2' /etc/modules || echo 'dwc2' >> /etc/modulessudo git clone https://github.com/Adntrky/PoorMansBashBunny /bunny
 grep -q -F 'libcomposite' /etc/modules || echo 'libcomposite' >> /etc/modules
 grep -q -F 'dtoverlay=dwc2' /boot/config.txt || echo 'dtoverlay=dwc2' >> /boot/config.txt
 
